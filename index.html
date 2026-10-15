@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Explorer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample HTML page.</p>
-    <!-- <script>
-        async function fetchDogBreeds() {
-            const response = await fetch(
-                "https://dogapi.dog/api/v2/breeds"
-            );
-            const body = await response.json();
 
-            console.log(body);
-        }
+    <header>
+        <h1>Dog Breed Explorer</h1>
+    </header>
 
-        fetchDogBreeds();
-    </script> -->
-    <script>
-        async function getDogs() {
+    <section class="hero">
+        <h2>Search.</h2>
+        <p>Discover dog breeds from around the world.</p>
 
-            const response = await fetch(
-                "https://dogapi.dog/api/v2/breeds"
-            );
-            const body = await response.json();
-            console.log(body);
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a dog breed..."
+            >
+            <button id="searchButton">Go</button>
+        </div>
+    </section>
 
+    <main>
+        <p id="message"></p>
+        <div id="dogList"></div>
+    </main>
 
-        }
-        getDogs();
-    </script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

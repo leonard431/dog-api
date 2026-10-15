@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+    min-height: 100vh;
+}
+
+header {
+    background: #fff;
+    padding: 25px 7%;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.hero {
+    max-width: 850px;
+    margin: 65px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #ff7a18;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #e9680b;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    padding: 0 25px;
+}
+
+#message {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+#bookList,
+#pokemonInfo,
+#dogList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.book-card,
+.pokemon-card,
+.dog-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.book-card img,
+.pokemon-card img,
+.dog-card img {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.book-card img {
+    height: 200px;
+}
+
+.pokemon-card img,
+.dog-card img {
+    height: 170px;
+}
+
+.book-card h2,
+.pokemon-card h2,
+.dog-card h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.book-card p,
+.pokemon-card p,
+.dog-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        margin-top: 45px;
+    }
+
+    .search-box button {
+        padding: 13px;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+}
+.dog-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 12px 0;
+    background-color: #f0f0f0;
+}
+
+.image-credit {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #666;
+}
