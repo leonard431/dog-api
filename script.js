@@ -1,4 +1,4 @@
-const dogList = document.getElementById("dogList").value="anything"
+const dogList = document.getElementById("dogList");
 async function getDogs() {
     try{
       const response = await fetch(
@@ -7,12 +7,16 @@ async function getDogs() {
     const body = await response.json();
     console.log(body);
     
-    body.data.forEach(dog) => {
+    body.data.forEach((dog) => {
         const dogName = document.createElement("h2")
-        dogName.textContent = dogattribute.name;
+        dogName.textContent = dog.attributes.name;
         dogList.appendChild(dogName);
-    }; 
+    });
+    } catch (error) {
+        console.error("Error fetching dog breeds:", error);
     }
 }
+
+
 getDogs();
 
